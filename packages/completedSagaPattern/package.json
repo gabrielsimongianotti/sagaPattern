@@ -1,0 +1,30 @@
+{
+  "name": "@saga-pattern/completed-saga_pattern",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "coverage": "jest --coverage",
+    "test": "NODE_ENV=test jest",
+    "build": "babel src package.json package-lock.json --out-dir dist --copy-files && cross-env NODE_ENV=production npm install --prefix dist && zip -rXFS9 function.zip dist",
+    "clean": "rimraf dist function.zip",
+    "deploy": "terraform apply"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/runtime-corejs3": "^7.21.0",
+    "aws-sdk": "^2.1343.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.21.0",
+    "@babel/core": "^7.21.3",
+    "@babel/plugin-transform-runtime": "^7.21.0",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/register": "^7.21.0",
+    "cross-env": "^7.0.3",
+    "jest": "^29.5.0",
+    "rimraf": "^4.4.1"
+  }
+}

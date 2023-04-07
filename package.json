@@ -1,0 +1,28 @@
+{
+  "name": "sagapattern",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "lerna run test",
+    "build": "lerna run build",
+    "clean": "lerna run clean",
+    "cicd-init": "lerna run test && lerna run build && cd terraform && terraform init",
+    "validate": "lerna test && cd terraform && terraform validate",
+    "lint": "eslint packages/**/*.js --ignore-pattern 'packages/**/dist/**/*.js' --ignore-pattern 'packages/**/test/mock/*.js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrielsimongianotti/sagaPattern.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gabrielsimongianotti/sagaPattern/issues"
+  },
+  "homepage": "https://github.com/gabrielsimongianotti/sagaPattern#readme",
+  "dependencies": {
+    "lerna": "^6.6.1"
+  }
+}
